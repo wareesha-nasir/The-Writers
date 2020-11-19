@@ -1,21 +1,44 @@
-.content{
-    width: 90%;
-    margin: 30px auto 30px;
-    border: 1px solid blue;
+body{
+    overflow-x: hidden;
 }
-.content .main-content{
-    width: 70%;
-    float: left;
-    
+.side-bar{
+    margin-top: 85px;
+    border-radius: 5px;
+    padding:20px;
+    height:300px;
 }
-.content .side-bar{
-    width: 30%;
-    height: 300px;
-    float: left;
-    border: 1px solid green;
+.side-bar .search-section{
+  background-color: white;
+  margin-right:10%;
+  padding: 20px;
+  margin-bottom: 20px;
 }
-.clearfix::after{
-    content: '';
+.side-bar .topic{
+    background-color: white;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h1{
+    margin-left: 10%;
+    padding-top: 4%;
+    background-color:rgb(248, 246, 246);
+}
+#main-card{
+outline: none;
+border: none;
+box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+margin-top: 3%;
+}
+.text{
+    width:100%;
     display: block;
-    clear: both;
+    outline:none;
+    border: 1px solid #e0e0e0;
+padding: .7rem 1rem;
+border-radius: 5px;
+line-height: 1.5rem;
+color: #444;
+font-family: 'lora',serif;
 }
