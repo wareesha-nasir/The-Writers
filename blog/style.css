@@ -1,6 +1,4 @@
-body{
-    overflow-x: hidden;
-}
+
 .side-bar{
     margin-top: 85px;
     border-radius: 5px;
@@ -39,6 +37,30 @@ margin-top: 3%;
 padding: .7rem 1rem;
 border-radius: 5px;
 line-height: 1.5rem;
+font-size: 1.5rem;
 color: #444;
 font-family: 'lora',serif;
 }
+.card-body{
+    font-family: 'lora', serif;
+}
+.side-bar .topic ul{
+    border-top:1px solid #e0e0e0;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+.side-bar .topic ul li a{
+   display: block;
+    padding: 15px 0px 15px 0px;
+border-bottom:1px solid #e0e0e0;
+color: black;
+transition: all 0.3s;
+font-family: 'lora', serif;
+}
+.side-bar .topic ul li a:hover{
+    padding-left: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+    }
+    

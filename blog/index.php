@@ -34,7 +34,7 @@ include("config.php");
               <a href="index.php">Home</a>
             </li>
             <li class="nav-link" style="--i: .85s">
-              <a href="donate.php">Join</a>
+              <a href="registration.php">Join</a>
 
             </li>
             <li class="nav-link" style="--i: 1.1s">
@@ -68,11 +68,15 @@ include("config.php");
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+                  <a href="#" style="color: rgb(8, 101, 138);; font-weight:600;"><h2 class="card-title">New Wave Of Corona</h2></a>
+                  <i class="fa fa-user-o" aria-hidden="true" style="color:rgb(8, 101, 138);">Wareesha</i>&nbsp;
+                    <i class="fa fa-calendar-o" aria-hidden="true" style="color: rgb(8, 101, 138);"> Feb 20,2020 </i>
+                  <p class="card-text" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    </p>
+                    <button class="btn btn-outline-secondary" type="button" 
+                   >Read</button>
+                   </div>
               </div>
             </div>
         </div>
@@ -83,9 +87,14 @@ include("config.php");
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <a href="#" style="color: rgb(8, 101, 138); font-weight:600;"><h2 class="card-title">Bitcoin. A New Challenge</h2></a>
+        <i class="fa fa-user-o" aria-hidden="true" style="color:rgb(8, 101, 138);">Wareesha</i>&nbsp;
+         <i class="fa fa-calendar-o" aria-hidden="true" style="color: rgb(8, 101, 138);"> Feb 20,2020 </i>
+        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                     <button class="btn btn-outline-secondary" type="button" 
+                    >Read</button>
+        
       </div>
     </div>
   </div>
@@ -97,15 +106,19 @@ include("config.php");
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" style="color: rgb(8, 101, 138); font-weight:600;"><h2 class="card-title">Machine Learning</h2></a>
+        <i class="fa fa-user-o" aria-hidden="true" style="color:rgb(8, 101, 138);">Wareesha</i>&nbsp;
+         <i class="fa fa-calendar-o" aria-hidden="true" style="color: rgb(8, 101, 138);"> Feb 20,2020 </i>
+        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                     <button class="btn btn-outline-secondary" type="button" 
+                   >Read</button>
                 </div>
               </div>
             </div>
         </div>
     </div>
+    <!--side-bar-->
     <div class="col-md-4 col-sm-12">
         <div class="side-bar">
             <div class="search-section">
@@ -116,7 +129,7 @@ include("config.php");
             </div>
             <div class="topic">
               <h2>Topics</h2>
-              <ul>
+              <ul id="topic-list">
                 <li><a href="#">Academics</a></li>
                 <li><a href="#">IT</a></li>
                 <li><a href="#">Social</a></li>
@@ -127,5 +140,4 @@ include("config.php");
     </div>
 </div>
 </body>
-
 </html>
