@@ -26,7 +26,7 @@ include 'includes/config.php';
 								<input type="text" name="cat_title" placeholder="Category Title" class="form-control">
 							</div>
 							<div class="form-group">
-								<input type="submit" name="cat_add" value="Add Category" class="btn btn-primary">
+								<a href="#"><input type="submit" name="cat_add" value="Add Category" class="btn btn-primary"></a>
 							</div>
 						</form>
 
@@ -41,7 +41,7 @@ include 'includes/config.php';
                     <th>Delete</th>
                  </thead>
                  <tbody>
-                   <?php //show_category(); ?>
+                   <?php show_category(); ?>
                  </tbody>
                </table>
 						</div>
