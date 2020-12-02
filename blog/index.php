@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("database/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,17 +96,28 @@ include("config.php");
                 <input type="search" placeholder="search..." name="search-item" class="text" >
               </form>
             </div>
+            <?php
+            function show(){
+              global $conn;
+              $query="SELECT * FROM category";
+              $result=mysqli_query($conn, $query);
+              while($row=mysqli_fetch_assoc($result)){
+                $cat_title=$row['cat_title'];
+                echo "<ul id='topic-list'>
+                <li><a href='#'>{$cat_title}</a></li>
+              </ul>";
+            }
+          }
+            ?>
             <div class="topic">
               <h2>Topics</h2>
-              <ul id="topic-list">
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">IT</a></li>
-                <li><a href="#">Social</a></li>
-                <li><a href="#">Motivational</a></li>
-              </ul>
+              <?php show()?>
+               
             </div>
           </div>
     </div>
+
+  
 </div>
 </body>
 </html>
