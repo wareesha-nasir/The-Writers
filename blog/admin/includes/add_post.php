@@ -1,6 +1,6 @@
 <?php
  $sql = "SELECT * FROM category";
- $res = mysqli_query($connection, $sql);
+ $res = mysqli_query($conn, $sql);
 ?>
 
 <div class="container">
@@ -46,17 +46,7 @@
         <label for="">Post Content</label>
         <textarea name="content" rows="8" cols="80" class="form-control"></textarea>
       </div>
-      <div class="form-group">
-        <label for="">Post Tags</label>
-        <input type="text" name="tags" placeholder="Seperate tags with a comma (,)" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="">Post Status</label>
-      <select class="form-control" name="status">
-        <option value="draft">Draft</option>
-        <option value="published">Published</option>
-      </select>
-      </div>
+  
       <div class="form-group">
         <label for="">Post Image</label>
         <input type="file" name="post_image"  class="form-control">
