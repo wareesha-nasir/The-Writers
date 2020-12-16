@@ -1,5 +1,5 @@
 <?php
- $sql = "SELECT * FROM category";
+$sql = "SELECT * FROM category";
  $res = mysqli_query($conn, $sql);
 ?>
 
@@ -33,7 +33,7 @@
       <select class="form-control" name="category_id">
         <?php
         $sql = "SELECT * FROM category";
-        $res = mysqli_query($connection, $sql);
+        $res = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_array($res)) {
             $cat_title = $row['cat_title'];
               $cat_id = $row['cat_id'];

@@ -19,18 +19,19 @@
 
 
 					<?php
-						if (isset($_GET['source'])) {
-								$source = $_GET['source'];
-
-						switch ($source) {
-							case 'add_new':
-								include "includes/add_post.php";
-								break;
+					if(isset($_GET['source'])){
+						$source=$_GET['source'];
+					}
+					switch($source){
+						case 'add_new':
+							include "includes/add_post.php";
+							break;
 							default:
-								include "includes/view_post.php";
-								break;
-						}
-		}
+							header('Location:posts.php');
+							break;
+
+					}	
+					
 					 ?>
 </div>
 				</div>

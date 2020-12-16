@@ -48,25 +48,16 @@ else{
  }
 }
 delete_category();
-  /*
-
-
-function add_post(){
-  global $connection;
-  if (isset($_POST['publish'])) {
-    $post_title = $_POST['title'];
-    $post_author = $_POST['author'];
-    $post_category = $_POST['category'];
-    $post_category_id = $_POST['category_id'];
-    $post_content = mysqli_real_escape_string($connection,$_POST['content']);
-    $post_tags = $_POST['tags'];
-    $post_status = $_POST['status'];
-
-    $date = date("l d F Y");
-    $post_views = 0;
-    $post_comment_count = 0;
-
-    if (isset($_FILES['post_image'])) {
+ function add_post(){
+   global $conn;
+   if(isset($_POST['publish'])){
+     $post_title=$_POST['title'];
+     $post_author=$_POST['author'];
+     $post_category=$_POST['category'];
+     $post_id=$_POST['category_id'];
+     $post_content=$_POST['content'];
+     $date=date("l,d,F,Y");
+     if (isset($_FILES['post_image'])) {
       $dir = "../images/";
       $target_file = $dir.basename($_FILES['post_image']['name']);
       if (move_uploaded_file($_FILES['post_image']['tmp_name'],$target_file)) {
@@ -75,17 +66,22 @@ function add_post(){
         echo "Something went wrong while uploading image";
       }
     }
-    $query = "INSERT INTO posts (post_title,post_author,post_category,post_category_id,post_content,post_image,post_date,post_comment_count,post_views,post_tags,post_status) VALUES('$post_title','$post_author','$post_category','$post_category_id','$post_content','$target_file','$date','$post_comment_count','$post_views','$post_tags','$post_status')";
-    $result = mysqli_query($connection, $query);
-    if (!$result) {
-      die("Could not send data " . mysqli_error($connection));
-      header("Location: ../posts.php?source=add_new");
-    }else{
-      header("Location: ../posts.php?source=");
-    }
+    $query="INSERT INTO post(post_title,post_category,post_category_id,post_content,post_author,post_date,post_image)
+     Values('$post_title','$post_category','$post_id','$post_content','$post_author','$date','$target_file')";
+   $res=mysqli_query($conn,$query);
+   if($res){
+    header("Location: ../posts.php?Post_added");
+   }
+   else{
+    die("Could not send data " . mysqli_error($conn));
+    header("Location: ../posts.php?source=add_new");
+   }
   }
-}
-  add_post();
+ }
+add_post();
+/*
+
+    $post_content = mysqli_real_escape_string($connection,$_POST['content']);
 
 function show_posts(){
   global $connection;
