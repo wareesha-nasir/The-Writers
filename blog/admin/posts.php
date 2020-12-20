@@ -16,27 +16,27 @@
 					<h1 class="page-header">
 						Welcome to the Administration Panel
 					</h1>
-
-
 					<?php
 					if(isset($_GET['source'])){
 						$source=$_GET['source'];
-					}
 					switch($source){
 						case 'add_new':
 							include "includes/add_post.php";
 							break;
 							default:
-							header('Location:posts.php');
-							break;
+							include "includes/view_post.php";
+									break;
+						}
 
 					}	
-					
-					 ?>
+					?>
+				
 </div>
 				</div>
 
-
+				
+					
+					 
 			</div>
 
 			<!-- /.row -->
