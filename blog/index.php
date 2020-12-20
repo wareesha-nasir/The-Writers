@@ -25,68 +25,48 @@ include("database/config.php");
   <div>
     <img src="resources/blog.jpg" style="width: 100%; height:500px;">
   </div>
-  <!--content section-->
-  
   <div class="row">
-    <div class="col-md-8 col-sm-12">
-        <h1 >RECENT POST</h1>
-        <div class="card mb-3" id="main-card" style="width: 80%; margin-left:10%;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="resources/bitcoin.jpg" class="card-img" style="width: 100%; height:100%">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <a href="#" style="color: rgb(8, 101, 138);; font-weight:600;"><h2 class="card-title">Bitcoin. A New Challenge</h2></a>
-                  <i class="fa fa-user-o" aria-hidden="true" style="color:#444;">Wareesha</i>&nbsp;
-                    <i class="fa fa-calendar-o" aria-hidden="true" style="color: #444;"> Feb 20,2020 </i>
-                  <p class="card-text" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    </p>
-                    <button class="btn btn-outline-secondary" type="button" 
-                   >Read</button>
-                   </div>
-              </div>
-            </div>
+<div class="col-md-8 col-sm-12">
+    <h1 >RECENT POST</h1>
+  <!--content section-->
+  <?php
+  global $conn;
+  $sql="SELECT * FROM post";
+  $res=mysqli_query($conn,$sql);
+  while($row=mysqli_fetch_assoc($res)){
+    $post_id = $row['post_id'];
+    $post_title = $row['post_title'];
+    $post_author = $row['post_author'];
+    $post_category = $row['post_category'];
+    $post_category_id = $row['post_category_id'];
+    $post_content = $row['post_content'];
+    $post_image = $row['post_image'];
+    $date = $row['post_date'];
+  ?> 
+  
+    <div class="card mb-3" id="main-card" style="width: 80%; margin-left:10%;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="admin/images/<?php echo $post_image; ?>" class="card-img" style="width: 100%; height:100%">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <a href="#" style="color: rgb(8, 101, 138);; font-weight:600;"><h2 class="card-title"><?php echo $post_title?></h2></a>
+              <i class="fa fa-user-o" aria-hidden="true" style="color:#444;"><?php echo $post_author; ?></i>&nbsp;
+                <i class="fa fa-calendar-o" aria-hidden="true" style="color: #444;"> <?php echo $date?> </i>
+              <p class="card-text" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                </p>
+                <button class="btn btn-outline-secondary" type="button" 
+               >Read</button>
+               </div>
+          </div>
         </div>
-        <div class="card mb-3" id="main-card" style="max-width: 80%; margin-left:10%;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="resources/corona.jpg" class="card-img" alt="..." style="width: 100%; height:100%; ">
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-      <a href="#" style="color: rgb(8, 101, 138); font-weight:600;"><h2 class="card-title">Bitcoin. A New Challenge</h2></a>
-        <i class="fa fa-user-o" aria-hidden="true" style="color:#444;">Wareesha</i>&nbsp;
-         <i class="fa fa-calendar-o" aria-hidden="true" style="color: #444;"> Feb 20,2020 </i>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                     <button class="btn btn-outline-secondary" type="button" 
-                    >Read</button>
-        
-      </div>
-    </div>
-  </div>
+
+ <?php }
+  ?>
 </div>
-        <div class="card mb-3" id="main-card" style="width: 80%; margin-left:10%;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="resources/machine learning.jpg" class="card-img" style="width: 100%; height:100%">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                <a href="#" style="color: rgb(8, 101, 138); font-weight:600;"><h2 class="card-title">Machine Learning</h2></a>
-        <i class="fa fa-user-o" aria-hidden="true" style="color:#444;">Wareesha</i>&nbsp;
-         <i class="fa fa-calendar-o" aria-hidden="true" style="color: #444;"> Feb 20,2020 </i>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                     <button class="btn btn-outline-secondary" type="button" 
-                   ><a href="login.php">Read </a></button>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
     <!--side-bar-->
     <div class="col-md-4 col-sm-12">
         <div class="side-bar">
@@ -112,12 +92,9 @@ include("database/config.php");
             <div class="topic">
               <h2>Topics</h2>
               <?php show()?>
-               
-            </div>
+                </div>
           </div>
     </div>
-
-  
 </div>
 </body>
 </html>
