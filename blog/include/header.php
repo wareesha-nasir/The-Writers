@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/nav.css">
 <header>
     <div class="container-fluid nav-confluid">
       <input type="checkbox" name="" id="check">

@@ -1,0 +1,66 @@
+
+.side-bar{
+    margin-top: 85px;
+    border-radius: 5px;
+    padding:20px;
+    height:300px;
+}
+.side-bar .search-section{
+  background-color: white;
+  margin-right:10%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.side-bar .topic{
+    background-color: white;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h1{
+    margin-left: 10%;
+    padding-top: 4%;
+    background-color:rgb(248, 246, 246);
+}
+#main-card{
+outline: none;
+border: none;
+box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+margin-top: 3%;
+}
+.text{
+    width:100%;
+    display: block;
+    outline:none;
+    border: 1px solid #e0e0e0;
+padding: .7rem 1rem;
+border-radius: 5px;
+line-height: 1.5rem;
+font-size: 1.5rem;
+color: #444;
+font-family: 'lora',serif;
+}
+.card-body{
+    font-family: 'lora', serif;
+}
+.side-bar .topic ul{
+    border-top:1px solid #e0e0e0;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+.side-bar .topic ul li a{
+   display: block;
+    padding: 15px 0px 15px 0px;
+border-bottom:1px solid #e0e0e0;
+color: black;
+transition: all 0.3s;
+font-family: 'lora', serif;
+}
+.side-bar .topic ul li a:hover{
+    padding-left: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+    }
+    
